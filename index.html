@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Christian Puerin - BS Information Technology student in Cebu, learning game development and interactive web projects.">
+    <title>Christian Puerin | MyPortFolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <header id="header">
+        <a class="brand" href="#home"><span class="my">My</span><span class="pf">PortFolio</span><span class="tagmark">&lt;/&gt;</span></a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav>
+            <ul id="nav">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME -->
+        <section id="home" class="hero" aria-labelledby="intro-title">
+            <div class="hero-copy">
+                <h1 id="intro-title" data-profile="nameBig">Hi, I'm Christian</h1>
+                <p class="role">Aspiring Game Developer | IT Student</p>
+                <p class="lead" data-profile="lead">I'm a BS Information Technology student from Cebu Eastern College, Inc. (CEC) in Cebu City, Philippines.</p>
+                <p data-profile="intro">I'm learning how software gets built, from game mechanics and interfaces to web apps and IoT systems. I enjoy turning ideas into something playable or usable, and I'm working toward a career in game development and interactive software.</p>
+                <p class="tags-label">Type of work I'm learning and interested in:</p>
+                <ul class="tags" data-profile="interests">
+                    <li>Game development</li>
+                    <li>Godot 4 / GDScript</li>
+                    <li>Interactive web (HTML5 / JavaScript)</li>
+                    <li>Web apps (Python / Django)</li>
+                </ul>
+                <div class="hero-actions">
+                    <a class="btn primary" href="#projects">View My Projects</a>
+                    <a class="round-link" href="#" data-profile="facebook" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/facebook.png" alt=""></a>
+                    <a class="round-link" href="#" data-profile="phoneLink" aria-label="Call me"><img src="images/phone.png" alt=""></a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-photo"><img class="icon" src="images/myprofile.jpg" alt="Portrait of Christian Puerin"></div>
+                <span class="float f1" style="--c: var(--green)">JS</span>
+                <span class="float f2" style="--c: var(--red)">HTML</span>
+                <span class="float f3" style="--c: var(--cyan)">Py</span>
+                <span class="float f4" style="--c: var(--pink)">Gd</span>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-photo"><img src="images/myprofile.jpg" alt=""></div>
+                <div class="about-text">
+                    <h3 class="gradient-text">I'm Christian Puerin</h3>
+                    <p class="about-intro">BS Information Technology student at Cebu Eastern College, Inc. (CEC) in Cebu City, learning to design, build, and ship games and interactive web projects.</p>
+
+                    <details class="row" open>
+                        <summary><span class="ico">{ }</span>Background</summary>
+                        <p>I'm from Brgy. Mabini, Cebu City. I finished senior high school at Mabini Integrated School and I'm now studying BS Information Technology at Cebu Eastern College, Inc. (CEC).</p>
+                    </details>
+                    <details class="row">
+                        <summary><span class="ico">&lt;/&gt;</span>Interests</summary>
+                        <p>Game development, anime, and interactive media. I like building games that combine clear mechanics with strong visual identity, and I'm curious about how systems like detection, reporting, and real-time feedback work in practice.</p>
+                    </details>
+                    <details class="row">
+                        <summary><span class="ico">&nearr;</span>Goal</summary>
+                        <p>To grow into a developer who can design, build, and ship interactive projects, and to keep learning from each project I finish.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <h2 class="section-title">My Skills</h2>
+            <p class="section-intro">Here is an honest picture of where I am. I'm still learning, so each level describes what I can do on my own today.</p>
+            <ul class="skills">
+                <li class="skill" style="--c: var(--cyan)">
+                    <span class="badge">Gd</span>
+                    <div>
+                        <strong>Godot 4 and GDScript</strong>
+                        <span class="dots" role="img" aria-label="Level 3 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+                        <span class="desc">Working knowledge. Scenes, autoload singletons, UI, and state-machine units in a tower defense game. Still learning best practices.</span>
+                    </div>
+                </li>
+                <li class="skill" style="--c: var(--green)">
+                    <span class="badge">&lt;/&gt;</span>
+                    <div>
+                        <strong>HTML, CSS and JavaScript</strong>
+                        <span class="dots" role="img" aria-label="Level 4 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+                        <span class="desc">Comfortable. Responsive pages and small canvas games (battle royale, Sokoban, space shooter).</span>
+                    </div>
+                </li>
+                <li class="skill" style="--c: var(--pink)">
+                    <span class="badge">Py</span>
+                    <div>
+                        <strong>Python and Django</strong>
+                        <span class="dots" role="img" aria-label="Level 3 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+                        <span class="desc">Working knowledge. Building a Django web app for my capstone and experimenting with OpenCV and speech recognition.</span>
+                    </div>
+                </li>
+                <li class="skill" style="--c: var(--red)">
+                    <span class="badge">Lua</span>
+                    <div>
+                        <strong>Roblox Studio and Lua</strong>
+                        <span class="dots" role="img" aria-label="Level 2 of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
+                        <span class="desc">Beginner to intermediate. Built data persistence and a quest system.</span>
+                    </div>
+                </li>
+                <li class="skill" style="--c: var(--violet)">
+                    <span class="badge">Ds</span>
+                    <div>
+                        <strong>Game design and planning</strong>
+                        <span class="dots" role="img" aria-label="Level 2 of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
+                        <span class="desc">Learning. Breaking projects into systems, character rosters, and stages.</span>
+                    </div>
+                </li>
+                <li class="skill learning" style="--c: var(--cyan)">
+                    <span class="badge">&nearr;</span>
+                    <div>
+                        <strong>Currently learning</strong>
+                        <span class="desc">Writing cleaner, reusable code and building larger projects with clear structure, such as game systems that stay easy to change.</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="wide">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-intro">Classwork and practice projects. Each one shows what I built and my part in it.</p>
+
+            <div class="tabs" role="group" aria-label="Filter projects">
+                <button class="tab active" type="button" data-filter="all">All</button>
+                <button class="tab" type="button" data-filter="game">Games</button>
+                <button class="tab" type="button" data-filter="web">Web and IoT</button>
+            </div>
+
+            <div class="project-grid">
+                <article class="project" data-cat="game">
+                    <div class="thumb"><span class="thumb-art">TD</span>
+                        <img class="shot-img" src="images/anime-wars-td.png" alt="Anime Wars TD gameplay screenshot" onerror="this.remove()">
+                    </div>
+                    <div class="project-body">
+                        <h3>Anime Wars TD</h3>
+                        <span class="status">In progress</span>
+                        <p>A tower defense game made in Godot 4, with anime-themed units and worlds from Naruto, One Piece, and Dragon Ball.</p>
+                        <p><strong>My contribution:</strong> I designed and coded the game systems and scenes myself, using a global game manager to store currency, player progress, and stage state.</p>
+                        <details class="built">
+                            <summary>What I built</summary>
+                            <ul>
+                                <li>Battlefield scene, including pause menu and castle HP scaling</li>
+                                <li>Stage select with world and stage unlock logic</li>
+                                <li>Shared unit behavior with a walk and attack state machine</li>
+                                <li>Floating HP bars above units and a boss HP bar</li>
+                            </ul>
+                        </details>
+                        <ul class="chips"><li>Godot 4</li><li>GDScript</li></ul>
+                        <!-- Add when you have a real link:
+                        <p class="links"><a class="btn small" href="https://YOUR-LINK-HERE">View project</a></p> -->
+                    </div>
+                </article>
+
+                <article class="project" data-cat="web">
+                    <div class="thumb"><span class="thumb-art">IoT</span>
+                        <img class="shot-img" src="images/safespeak-iot.png" alt="SafeSpeak-IoT screenshot" onerror="this.remove()">
+                    </div>
+                    <div class="project-body">
+                        <h3>SafeSpeak-IoT</h3>
+                        <span class="status">Capstone project</span>
+                        <p>A capstone web system that detects bad words in voice and camera input, logs incidents, and supports anonymous harassment reporting, with legal guidance based on Philippine laws (RA 11313 and RA 10173).</p>
+                        <!-- Add your own part, then remove this comment:
+                        <p><strong>My contribution:</strong> Describe what YOU did on the capstone.</p>
+                        -->
+                        <details class="built">
+                            <summary>What I built</summary>
+                            <ul>
+                                <li>A Django web application for incident logging, alerts, and reporting</li>
+                                <li>A detection engine that matches flagged words in English and Taglish</li>
+                                <li>A live detection prototype with OpenCV and speech recognition</li>
+                            </ul>
+                        </details>
+                        <ul class="chips"><li>Python</li><li>Django</li><li>OpenCV</li><li>Speech recognition</li></ul>
+                        <!-- Add when you have a real link:
+                        <p class="links"><a class="btn small" href="https://YOUR-LINK-HERE">View project</a></p> -->
+                    </div>
+                </article>
+
+                <article class="project" data-cat="game">
+                    <div class="thumb"><span class="thumb-art">JS</span>
+                        <img class="shot-img" src="images/mini-games.png" alt="HTML5 canvas mini-games screenshot" onerror="this.remove()">
+                    </div>
+                    <div class="project-body">
+                        <h3>HTML5 Canvas Mini-Games</h3>
+                        <span class="status">Practice projects</span>
+                        <p>A set of small games built with HTML5 canvas and JavaScript: a battle royale, a Sokoban puzzle, and a space shooter.</p>
+                        <p><strong>My contribution:</strong> I wrote the game logic and rendering for each game myself, as practice for the fundamentals behind larger projects.</p>
+                        <details class="built">
+                            <summary>What I built</summary>
+                            <p>Game loops, player input, collision checks, and simple game states, all in plain JavaScript without a game engine.</p>
+                        </details>
+                        <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Canvas API</li></ul>
+                        <!-- Add when you have a real link:
+                        <p class="links"><a class="btn small" href="https://YOUR-LINK-HERE">View project</a></p> -->
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-card">
+                <p>You can reach me through the options below.</p>
+                <a class="btn primary" data-profile="emailButton" href="#">Email me</a>
+                <ul class="contact-list">
+                    <li>
+                        <img src="images/facebook.png" alt="">
+                        <a href="#" data-profile="facebook" target="_blank" rel="noopener">Facebook</a>
+                    </li>
+                    <li>
+                        <img src="images/phone.png" alt="">
+                        <a href="#" data-profile="phone">+63 948 083 1066</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-row">
+            <a class="brand" href="#home"><span class="my">My</span><span class="pf">PortFolio</span><span class="tagmark">&lt;/&gt;</span></a>
+            <ul class="footer-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2026 <span data-profile="name">Christian Puerin</span>. All rights reserved.</p>
+    </footer>
+
+    <script src="js/profile.js"></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
