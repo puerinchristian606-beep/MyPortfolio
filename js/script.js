@@ -1,6 +1,5 @@
-// Portfolio scripts: mobile menu, active-section nav, profile display, and page interactions.
+
 (function () {
-    // ---------- Mobile menu ----------
     var toggle = document.getElementById("menu-toggle");
     var nav = document.getElementById("nav");
     if (toggle && nav) {
@@ -18,7 +17,6 @@
         });
     }
 
-    // ---------- Highlight the nav link for the section on screen ----------
     var navLinks = nav ? Array.prototype.slice.call(nav.querySelectorAll("a[href^='#']")) : [];
     var sections = navLinks.map(function (link) {
         return document.getElementById(link.getAttribute("href").slice(1));
@@ -36,7 +34,6 @@
         sections.forEach(function (sec) {
             if (sec.getBoundingClientRect().top <= line) current = sec;
         });
-        // At the very bottom, the last section (Contact) is short, so force it active
         if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
             current = sections[sections.length - 1];
         }
@@ -49,8 +46,6 @@
         updateActive();
     }
 
-    // ---------- Show profile on the page ----------
-    // Content comes from js/profile.js. Edit that file to change your details.
     function phoneHref(phone) {
         return "tel:" + String(phone).replace(/[^\d+]/g, "");
     }
@@ -89,12 +84,11 @@
 
     if (window.PROFILE) applyProfile(window.PROFILE);
 
-    // ---------- Interactions ----------
     var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var canHover = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
     var header = document.getElementById("header");
 
-    // Scroll progress bar under the header
+    
     if (header) {
         var bar = document.createElement("div");
         bar.className = "progress";
@@ -108,7 +102,6 @@
         updateBar();
     }
 
-    // Sliding pill behind the active nav link (desktop)
     if (nav && navLinks.length) {
         var pill = document.createElement("span");
         pill.className = "nav-pill";
@@ -132,7 +125,6 @@
         movePill();
     }
 
-    // Project filter tabs
     var tabs = document.querySelectorAll(".tab");
     var projects = document.querySelectorAll(".project[data-cat]");
     tabs.forEach(function (tab) {
@@ -146,7 +138,6 @@
     });
 
     if (!reduceMotion) {
-        // Scroll reveal (content stays visible if this script fails)
         document.documentElement.classList.add("js-motion");
         var list = Array.prototype.slice.call(document.querySelectorAll(
             "main > section:not(.hero) .section-title, main > section:not(.hero) .section-intro, " +
@@ -180,7 +171,6 @@
         }, { passive: true });
     }
 
-    // ---------- Photo that travels from Home down to About ----------
     var heroVisual = document.querySelector(".hero-visual");
     var aboutPhoto = document.querySelector(".about-photo");
     if (heroVisual && aboutPhoto && !reduceMotion) {
@@ -204,7 +194,7 @@
             enabled = window.innerWidth > 900;
             root2.classList.toggle("travel-on", enabled);
             if (!enabled) return;
-            // measure the real elements (they are only hidden, so layout is unchanged)
+    
             root2.classList.remove("travel-on");
             H = docRect(heroVisual);
             A = docRect(aboutPhoto);
@@ -237,7 +227,6 @@
         }
         measure();
 
-        // Tilt toward the pointer
         if (canHover) {
             tPhoto.addEventListener("mousemove", function (e) {
                 var r = tPhoto.getBoundingClientRect();
